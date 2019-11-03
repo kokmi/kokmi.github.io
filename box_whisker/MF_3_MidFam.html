@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <script src="https://d3plus.org/js/d3plus-plot.v0.8.full.min.js"></script>
+
+  <style>
+
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+  </style>
+
+</head>
+
+<body></body>
+
+<script>
+
+  var data = [
+    {id: "Male",   value: 30.7},
+    {id: "Male",   value: 33.5},
+    {id: "Male",   value: 25.0},
+    {id: "Male",   value: 31.3},
+    {id: "Male",   value: 30.1},
+    {id: "Male",   value: 29.8},
+    {id: "Male",   value: 29.7},
+    {id: "Male",   value: 37.6},
+    {id: "Male",   value: 40.2},
+    {id: "Male",   value: 28.5},
+    {id: "Female", value: 20.8},
+    {id: "Female", value: 30.4},
+    {id: "Female", value: 25.7},
+    {id: "Female", value: 28.5},
+    {id: "Female", value: 36.0},
+    {id: "Female", value: 38.9},
+    {id: "Female", value: 30.8},
+    {id: "Female", value: 32.0},
+    {id: "Female", value: 29.4},
+    {id: "Female", value: 28.2}
+  ];
+
+  new d3plus.BoxWhisker()
+    .data(data)
+    .groupBy(["id", "value"])
+    .x("id")
+    .y("value")
+    .render();
+
+</script>
+
+</html>

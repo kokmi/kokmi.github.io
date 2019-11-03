@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <script src="https://d3plus.org/js/d3plus-plot.v0.8.full.min.js"></script>
+
+  <style>
+
+    body {
+      margin: 0;
+      overflow: show;
+    }
+
+  </style>
+
+</head>
+
+<body></body>
+
+<script>
+
+  var myData = [
+    {id: "Male",   x: 239,  y: 30.7},
+    {id: "Male",   x: 241,  y: 33.5},
+    {id: "Male",   x: 243,  y: 25.0},
+    {id: "Male",   x: 245,  y: 31.3},
+    {id: "Male",   x: 251,  y: 30.1},
+    {id: "Male",   x: 253,  y: 29.8},
+    {id: "Male",   x: 255,  y: 29.7},
+    {id: "Male",   x: 257,  y: 37.6},
+    {id: "Male",   x: 261,  y: 40.2},
+    {id: "Male",   x: 263,  y: 28.5},
+    {id: "Female", x: 239,  y: 20.8},
+    {id: "Female", x: 241,  y: 30.4},
+    {id: "Female", x: 243,  y: 25.7},
+    {id: "Female", x: 245,  y: 28.5},
+    {id: "Female", x: 251,  y: 36.0},
+    {id: "Female", x: 253,  y: 38.9},
+    {id: "Female", x: 255,  y: 30.8},
+    {id: "Female", x: 257,  y: 32.0},
+    {id: "Female", x: 261,  y: 29.4},
+    {id: "Female", x: 263,  y: 28.2}
+  ];
+  
+ new d3plus.BarChart()
+    .config({
+      data: myData,
+      discrete: "y",
+      groupBy: "id",
+      x: "y",
+      y: "x",
+      xConfig: {
+        title: "Hispanic People Individual Income-Grew up in Middle Family",
+        titleConfig: {
+          fontColor: "green"  
+        },
+      },
+      yConfig: {
+        title: "Tracts",
+        titleConfig: {
+          fontColor: "green"
+        }
+      }
+    })
+    .render();
+
+</script>
+
+</html>
