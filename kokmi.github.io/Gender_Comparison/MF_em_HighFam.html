@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <script src="https://d3plus.org/js/d3plus-plot.v0.8.full.min.js"></script>
+
+  <style>
+
+    body {
+      margin: 0;
+      overflow: show;
+    }
+
+  </style>
+
+</head>
+
+<body></body>
+
+<script>
+
+  var myData = [
+    {id: "Male",   x: 239,  y: 0.62},
+    {id: "Male",   x: 241,  y: 0.78},
+    {id: "Male",   x: 243,  y: 0.71},
+    {id: "Male",   x: 245,  y: 0.80},
+    {id: "Male",   x: 251,  y: 0.80},
+    {id: "Male",   x: 253,  y: 0.65},
+    {id: "Male",   x: 255,  y: 0.74},
+    {id: "Male",   x: 257,  y: 0.83},
+    {id: "Male",   x: 261,  y: 0.97},
+    {id: "Male",   x: 263,  y: 0.74},
+    {id: "Female", x: 239,  y: 0.45},
+    {id: "Female", x: 241,  y: 0.77},
+    {id: "Female", x: 243,  y: 0.88},
+    {id: "Female", x: 245,  y: 0.84},
+    {id: "Female", x: 251,  y: 0.93},
+    {id: "Female", x: 253,  y: 0.86},
+    {id: "Female", x: 255,  y: 0.80},
+    {id: "Female", x: 257,  y: 0.80},
+    {id: "Female", x: 261,  y: 0.84},
+    {id: "Female", x: 263,  y: 0.72}
+  ];
+  
+ new d3plus.BarChart()
+    .config({
+      data: myData,
+      discrete: "y",
+      groupBy: "id",
+      x: "y",
+      y: "x",
+      xConfig: {
+        title: "Hispanic People Employment Rate-Grew up in High Family (%)",
+        titleConfig: {
+          fontColor: "green"  
+        },
+      },
+      yConfig: {
+        title: "Tracts",
+        titleConfig: {
+          fontColor: "green"
+        }
+      }
+    })
+    .render();
+
+</script>
+
+</html>
